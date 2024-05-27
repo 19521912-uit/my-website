@@ -1,0 +1,116 @@
+/* me.css */
+
+/* Importing the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(135deg, #333, #444);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.header-container p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.container {
+    flex: 1; /* Allow the container to grow and fill available space */
+    width: 90%;
+    margin: 1rem auto;
+    overflow-y: auto; /* Allow internal scrolling if necessary */
+}
+
+.section {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.section h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    background-color: #ff7e5f;
+    color: #121212;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.intro-content p,
+.section p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+a {
+    color: #ff7e5f;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 0.5rem 0;
+    background: #333;
+    color: #fff;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .header-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-container p {
+        font-size: 0.9rem;
+    }
+}
