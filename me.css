@@ -114,3 +114,28 @@ footer p {
         font-size: 0.9rem;
     }
 }
+
+/* Thanh cuộn tùy chỉnh */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #333; /* Màu nền của thanh cuộn */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff7f50; /* Màu của thanh cuộn */
+    border-radius: 6px; /* Bo tròn các góc của thanh cuộn */
+    border: 3px solid #333; /* Tạo khoảng cách giữa thanh cuộn và track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff6347; /* Màu của thanh cuộn khi hover */
+}
+
+/* Đối với Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #ff7f50 #333;
+}
