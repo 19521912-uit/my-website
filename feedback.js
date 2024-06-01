@@ -1,7 +1,3 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-
-
 // Cấu hình Firebase của bạn
 const firebaseConfig = {
   apiKey: "AIzaSyAjMVq8cgdhb0vUX3B0TlRrhivFX8k9NUQ",
