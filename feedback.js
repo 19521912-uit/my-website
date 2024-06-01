@@ -1,3 +1,7 @@
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+
 // Cấu hình Firebase của bạn
 const firebaseConfig = {
   apiKey: "AIzaSyAjMVq8cgdhb0vUX3B0TlRrhivFX8k9NUQ",
@@ -11,13 +15,13 @@ const firebaseConfig = {
 };
 
 // Khởi tạo Firebase
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
 // Hàm để gửi phản hồi lên Firebase
 function submitFeedback(name, email, message) {
-    const feedbackRef = database.ref('feedback/' + Date.now());
-    return feedbackRef.set({
+    const feedbackRef = ref(database, 'feedback/' + Date.now());
+    return set(feedbackRef, {
         name: name,
         email: email,
         message: message
