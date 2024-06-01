@@ -11,7 +11,7 @@ const firebaseConfig = {
 };
 
 // Khởi tạo Firebase
-const app = initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 // Hàm để gửi phản hồi lên Firebase
