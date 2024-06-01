@@ -1,7 +1,3 @@
-// Import các hàm Firebase cần thiết
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
-
 // Cấu hình Firebase của bạn
 const firebaseConfig = {
   apiKey: "AIzaSyAjMVq8cgdhb0vUX3B0TlRrhivFX8k9NUQ",
@@ -15,13 +11,13 @@ const firebaseConfig = {
 };
 
 // Khởi tạo Firebase
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
 
 // Hàm để gửi phản hồi lên Firebase
 function submitFeedback(name, email, message) {
-    const feedbackRef = ref(database, 'feedback/' + Date.now());
-    return set(feedbackRef, {
+    const feedbackRef = database.ref('feedback/' + Date.now());
+    return feedbackRef.set({
         name: name,
         email: email,
         message: message
