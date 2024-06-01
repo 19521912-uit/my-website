@@ -13,6 +13,7 @@ const firebaseConfig = {
   appId: "1:358691647082:web:8368519f0b819fc0176413",
   measurementId: "G-DW3GVF9KXP"
 };
+
 // Khởi tạo Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
@@ -20,7 +21,7 @@ const database = getDatabase(app);
 // Hàm để gửi phản hồi lên Firebase
 function submitFeedback(name, email, message) {
     const feedbackRef = ref(database, 'feedback/' + Date.now());
-    set(feedbackRef, {
+    return set(feedbackRef, {
         name: name,
         email: email,
         message: message
@@ -33,7 +34,14 @@ document.querySelector('form').addEventListener('submit', function(event) {
     const name = document.querySelector('#name').value;
     const email = document.querySelector('#email').value;
     const message = document.querySelector('#message').value;
-    submitFeedback(name, email, message);
-    alert('Phản hồi của bạn đã được gửi. Cảm ơn!');
-    document.querySelector('form').reset();
+    
+    submitFeedback(name, email, message)
+        .then(() => {
+            alert('Phản hồi của bạn đã được gửi. Cảm ơn!');
+            document.querySelector('form').reset();
+        })
+        .catch((error) => {
+            console.error('Lỗi khi gửi phản hồi:', error);
+            alert('Đã xảy ra lỗi khi gửi phản hồi. Vui lòng thử lại sau.');
+        });
 });
