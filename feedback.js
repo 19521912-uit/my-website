@@ -1,5 +1,5 @@
-import { initializeApp } from "./firebase/app";
-import { getDatabase, ref, set } from "./firebase/database";
+import firebase from "firebase/app";
+import "firebase/database";
 
 // Cấu hình Firebase của bạn
 const firebaseConfig = {
@@ -14,8 +14,8 @@ const firebaseConfig = {
 };
 
 // Khởi tạo Firebase
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+const app = firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
 
 // Hàm để gửi phản hồi lên Firebase
 function submitFeedback(name, email, message) {
