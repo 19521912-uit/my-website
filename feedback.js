@@ -1,5 +1,5 @@
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, set } from "firebase/database";
+import { initializeApp } from "./firebase/app";
+import { getDatabase, ref, set } from "./firebase/database";
 
 // Cấu hình Firebase của bạn
 const firebaseConfig = {
