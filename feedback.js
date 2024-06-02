@@ -1,3 +1,6 @@
+import { initializeApp } from "firebase/app";
+import { getDatabase, ref, set } from "firebase/database";
+
 // Cấu hình Firebase của bạn
 const firebaseConfig = {
   apiKey: "AIzaSyAjMVq8cgdhb0vUX3B0TlRrhivFX8k9NUQ",
@@ -11,8 +14,8 @@ const firebaseConfig = {
 };
 
 // Khởi tạo Firebase
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
 // Hàm để gửi phản hồi lên Firebase
 function submitFeedback(name, email, message) {
