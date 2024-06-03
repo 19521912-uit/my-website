@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-content-type-options" content="nosniff">
+    <title>Feedback - Trang cá nhân của Kiều Nguyên</title>
+    <link rel="stylesheet" href="feedback.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="logo.png" alt="Logo của Kiều Nguyên" class="logo">
+            <div class="title-container">
+                <h1>Kiều Nguyên</h1>
+                <p>Chuyên viên IT - Đam mê xem phim, nghe nhạc, chơi game</p>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <section class="section feedback-form">
+            <h2>Đánh giá và Phản hồi</h2>
+            <form id="feedback-form">
+                <div class="form-group">
+                    <label for="name">Họ và tên:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Phản hồi:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Gửi Phản hồi</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Kiều Nguyên</p>
+    </footer>
+    <script type="module" src="feedback.js"></script>
+</body>
+</html>
