@@ -1,0 +1,36 @@
+/* index.css */
+
+.section h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    background-color: #ff7e5f;
+    color: #121212;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.intro-content p,
+.section p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+a {
+    color: #ff7e5f;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
