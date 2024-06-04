@@ -59,7 +59,7 @@ header {
     overflow-y: auto; /* Allow internal scrolling if necessary */
 }
 
-/* Định dạng section */
+/* Định dạng section, p */
 .section {
     margin-bottom: 1rem;
     padding: 1rem;
@@ -68,6 +68,10 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
 
 /* Định dạng footer */
 footer {
